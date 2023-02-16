@@ -1,0 +1,41 @@
+.footer {
+    background: #191919;
+    padding: 62px 0 62px;
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 100px;
+        @media screen and (max-width:524px){
+            flex-direction: column;
+            align-items: center;
+        }
+        ul {
+            li {
+                a {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 30px;
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    .copy__text{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 40px;
+        text-transform: lowercase;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 62px;
+    }
+}

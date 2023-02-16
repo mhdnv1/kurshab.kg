@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header {
+    padding: 20px 0 30px;
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-logo h1 {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            color: #2A2A2A;
+        }
+        &-logo p{
+            font-family: 'Cerebri Sans Pro';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            color: #2A2A2A;
+            transition: 0.1s;
+        }
+        &-menu {
+            display: flex;
+            align-items: center;
+            column-gap: 40px;
+            @media screen and (max-width:581px) {
+                display: none;
+            }
+            li a {
+                font-family: 'Cerebri Sans Pro';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 16px;
+                line-height: 19px;
+                display: flex;
+                align-items: center;
+                color: #2A2A2A;
+                transition: 0.1s;
+                &:hover{
+                    color: #7FAD39;
+                }
+            }
+        }
+    }
+
+    // burder menu
+    .nav {
+        width: 100%;
+        height: 5em;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1em;
+        display: none;
+        position: relative;
+        opacity: 1;
+        transition: 1s;
+        @media screen and (max-width:581px) {
+            display: flex;
+        }
+    }   
+    .burger-menu {
+        height: 100%;
+        width: 4em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        cursor: pointer;
+        margin-top: -10px;
+    }
+    
+    .burger-bar {
+        width: 50px;
+        height: 5px;
+        background-color:#7FAD39;
+        border-radius: 0.5em;
+        position: relative;
+        z-index: 2000;
+    }
+    
+    .menu {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 111;
+        padding: 30px;
+    }
+    .menu li{
+        display: block;
+        width: 100%;
+    }
+    .menu li a{
+        font-family: 'Cerebri Sans Pro';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 16px;
+                line-height: 50px;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                transition: 0.1s;
+                &:hover{
+                    color: #7FAD39;
+                }
+    }
+    
+    /* ------------- sliding menu ------------------ */
+    .hidden {
+        display: none;
+    }
+    /* ----- animations--------- */
+    /* clicked */
+    .burger-bar.clicked:nth-child(1){
+        transform: rotate(45deg) translate(0.75em, 1.25em);
+        transition: ease-out 0.5s;
+    }
+    
+    .burger-bar.clicked:nth-child(2){
+        transform: scale(0.1);
+        transition: ease-out 0.5s;
+    }
+    
+    .burger-bar.clicked:nth-child(3){
+        transform: rotate(135deg) translate(-0.5em, 1em);
+        transition: ease-out 0.5s;
+    }
+    
+    /* unclicked */
+    .burger-bar.unclicked {
+        transform: rotate(0) translate(0);
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    }
+}

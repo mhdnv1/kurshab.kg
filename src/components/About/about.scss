@@ -1,0 +1,21 @@
+.about{
+    background-color: #fafafa;
+    padding: 40px;
+    &__blog{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        ul{
+            li{
+                line-height: 30px;
+                margin-bottom: 30px;
+                .about__icons{
+                    font-size: 30px;
+                    margin-right: 10px;
+                    color: #7FAD39;
+                }
+            }
+        }
+    }
+}
