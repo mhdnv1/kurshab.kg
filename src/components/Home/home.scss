@@ -2,27 +2,26 @@
     &__nav {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 20px;
-        @media screen and (max-width:581px){
-         display: block;       
+        flex-wrap: wrap;
+
+        @media screen and (max-width:581px) {
+            display: block;
         }
 
         .home__categoryes {
-            background: #7FAD39;
-            padding: 18px 25px;
-            border-radius: 5px;
-            color: #fff;
-            border: none;
-            outline: 0;
             margin-bottom: 5px;
-            @media screen and (max-width:581px){
+
+            @media screen and (max-width:581px) {
                 width: 100%;
             }
         }
 
         .home__search {
             display: flex;
-            width: 100%;
+            width: 70%;
+
             input {
                 padding: 15px 25px;
                 display: block;
@@ -39,59 +38,92 @@
                 border: none;
                 outline: 0;
             }
+
+            @media screen and (max-width:980px) {
+                width: 100%;
+            }
         }
+    }
+
+    .title__product {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 34px;
+        line-height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #2A2A2A;
     }
 
     .cards {
         display: flex;
         justify-content: flex-start;
-        gap: 20px;
-        padding-bottom: 100px;
+        column-gap: 10px;
         max-width: 100%;
         flex-wrap: wrap;
-        @media screen and (max-width:524px){
+
+        @media screen and (max-width:524px) {
             justify-content: center;
         }
-        .card {
-            width: 23%;
-            height: 300px;
-            padding: 20px;
+
+        .card__home {
+            width: 270px;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 60px;
+            overflow: hidden;
             background: #F5F5F5;
-            @media screen and (max-width:915px){
+            padding: 20px;
+            box-shadow: 10px 10px 5px 0px rgba(171, 98, 98);
+            border-radius: 10px;
+
+            @media screen and (max-width:915px) {
                 width: 31%;
             }
-            @media screen and (max-width:650px){
+
+            @media screen and (max-width:650px) {
                 width: 48%;
             }
-            @media screen and (max-width:524px){
+
+            @media screen and (max-width:524px) {
                 width: 80%;
             }
 
-            h6 {
-                font-family: 'Cerebri Sans Pro';
-                font-style: normal;
-                font-weight: 900;
-                font-size: 18px;
-                line-height: 25px;
+            a {
+                color: black;
                 text-align: center;
-                color: #2A2A2A;
-                background: #FFFFFF;
-            }
-            p {
-                font-family: 'Cerebri Sans Pro';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 30px;
-                display: flex;
-                align-items: center;
-                text-align: center;
-                color: #2A2A2A;
-            }
-            img {
-                height: 176px;
-                width: 100%;
-                object-fit: contain;
+
+                h2 {
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 20px;
+                    line-height: 50px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #2A2A2A;
+                }
+
+                p {
+                    font-family: 'Cerebri Sans Pro';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 30px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #2A2A2A;
+                }
+
+                img {
+                    width: 100%;
+                    height: 176px;
+                    object-fit: cover;
+                }
+
             }
         }
     }

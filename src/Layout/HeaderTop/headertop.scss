@@ -1,0 +1,18 @@
+.headertop{
+    background: #2A2A2A;
+    color: #fff;
+    padding: 20px 0;
+    .headertop__nav{
+        display: flex;
+        justify-content: space-between;
+        .headertop__left , .headertop__right{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            a{
+                font-size: 25px;
+                color: #fff;
+            }
+        }
+    }
+}
